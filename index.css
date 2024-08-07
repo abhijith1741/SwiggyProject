@@ -1,0 +1,25 @@
+
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 200px;
+}
+.nav-item {
+    padding: 0   48px;
+}
+.nav-item > ul {
+    display: flex;
+    list-style: none;
+}
+.nav-item > ul > li {
+    gap: 2px;
+    margin-right: 16px;
+}

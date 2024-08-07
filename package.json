@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "\"initial\""
+    "test": "\"initial\"",
+    "start": "parcel index.html"
   },
   "author": "Abhijit Lenin",
   "license": "ISC",
