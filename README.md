@@ -4,4 +4,5 @@
 <!-- Bundler -->
     - Which bundle our code and render in the browser DOM
     - common bundlers are [Parcel, Vite, webpack]
-    
+
+<!-- Config Driven UI -->
