@@ -14,12 +14,9 @@ const RestaurantMenu = () => {
 
 	const { costForTwoMessage, name, cuisines, avgRating, areaName } =
 		restaurantMenu.cards[2].card.card.info;
-	const itemCards =
-		restaurantMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card
-			.carousel;
 
 	const category =
-		restaurantMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
+		restaurantMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
 			(cat) =>
 				cat.card.card["@type"] ==
 				"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
@@ -40,7 +37,7 @@ const RestaurantMenu = () => {
 			</div>
 
 			<div className="text-center mx-auto">
-				{category.map((cate, index) => (
+				{category?.map((cate, index) => (
 					<MenuItems
 						key={cate.card.card.title}
 						data={cate}

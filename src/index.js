@@ -1,19 +1,24 @@
 import ReactDOM from "react-dom/client";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
+import Cart from "./components/Cart";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
+import { Provider } from "react-redux";
+import store from "./utils/store/store";
 
 const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
 
 const AppLayout = () => {
 	return (
-		<div className="app">
-			<Header />
-			<Outlet />
-		</div>
+		<Provider store={store}>
+			<div className="app">
+				<Header />
+				<Outlet />
+			</div>
+		</Provider>
 	);
 };
 
@@ -37,6 +42,10 @@ const appRoute = createBrowserRouter([
 			{
 				path: "/about",
 				element: <About name="abhi" />,
+			},
+			{
+				path: "/cart",
+				element: <Cart />,
 			},
 		],
 		errorElement: <Error />,
