@@ -15,7 +15,6 @@ const Header = () => {
 			<div className="nav-item p-2">
 				<ul className="flex items-center">
 					<Link to="/" className="mr-2 text-gray-400 hover:text-gray-700"><li>Home</li></Link>
-					<Link to="/about" className="mr-2 text-gray-400 hover:text-gray-700"><li>About</li></Link>
 					<Link to="/contact" className="mr-2 text-gray-400 hover:text-gray-700"><li>Contact Us</li></Link>
 					<Link to="/cart" className="mr-2 text-gray-400 hover:text-gray-700"><li>Cart [{cartItem.length} Items]</li></Link>
 
